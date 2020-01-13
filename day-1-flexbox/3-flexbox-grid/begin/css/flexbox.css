@@ -5,39 +5,98 @@ html {
 }
 /* inherit border-box on all elements in the universe and before and after
  */
-*, 
-*:before, 
+*,
+*:before,
 *:after {
   box-sizing: inherit;
 }
 
 body {
-	font-family: Arial, Geneva, sans-serif;
+  font-family: Arial, Geneva, sans-serif;
 }
 a {
-	color: #2772B0;
+  color: #2772b0;
 }
 .wrapper {
-	width: 97%;
-	max-width: 1200px;
-	margin: 0 auto;
-	float: none;
-	background-color: #fff;
+  width: 97%;
+  max-width: 1200px;
+  margin: 0 auto;
+  float: none;
+  background-color: #fff;
 }
 
 div img {
-	width: 100%;
-	max-width: 225px; 
+  width: 100%;
+  max-width: 225px;
 }
 
 /* grid system -- mobile first! */
+.row {
+  display: flex;
+  flex-flow: wrap row;
+}
 
+[class*="col-"] {
+  margin: 0 2.5%;
+}
+
+.col-4 {
+  flex: 0 0 95%;
+}
+
+.col-lg-1 {
+  background-color: antiquewhite;
+}
+
+.col-lg-2 {
+  background-color: lightpink;
+}
+
+.col-lg-3 {
+  background-color: lemonchiffon;
+}
+
+.col-lg-4 {
+  background-color: lightgreen;
+}
 
 /* Mobile Landscape Screen Sizes */
-@media only screen and (min-width: 480px)  {
+@media only screen and (min-width: 480px) {
+  .col-md-1 {
+    flex-basis: 20%;
+  }
 
+  .col-md-2 {
+    flex-basis: 45%;
+  }
+
+  .col-md-3 {
+    flex-basis: 70%;
+  }
+
+  .col-md-4 {
+    flex-basis: 95%;
+  }
 }
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
+  .col-lg-1 {
+    flex-basis: 20%;
+  }
 
+  .col-lg-2 {
+    flex-basis: 45%;
+  }
+
+  .col-lg-3 {
+    flex-basis: 70%;
+  }
+
+  .col-lg-4 {
+    flex-basis: 95%;
+  }
+
+  .pull-lg{
+	  order: -1;
+  }
 }
